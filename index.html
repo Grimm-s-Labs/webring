@@ -1,0 +1,89 @@
+---
+title: Home
+layout: html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/logo.png" type="image/png">
+    <link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimm's lab webring</title>
+</head>
+<body>
+    <main>
+    <div class="noise-overlay"></div>
+   <header>
+    <div class="logo">
+        <a href="/" style="text-decoration:none;color:inherit">Grimm Labs</a>
+    </div>
+        <nav>
+            <a href="/#about">About</a>
+            <a href="/team/">Team</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#contact">Contact</a>
+            <a href="https://discord.grimmlabs.org">Discord</a>
+        </nav>
+    </header>
+    <div class="description section" style="padding-top: 2rem;">
+        <div class="section-header"><span class="mono-label">01. Grimm's lab webring</span></div>
+        <p>A webring is a way of connecting people on the web, popular in the 90s, when individuals with shared interests linked their personal sites together.
+        The sites formed a ring, letting visitors travel from one page to the next — not through algorithms, but through proximity, curiosity, and shared intent.</p>
+
+        <small>If the ring is broken, please
+            <a href={{site.github_repo_url}}/issues/new>
+                submit an error report on GitHub
+            </a>.
+        </small>
+    </div>
+    <div class="faq section" >
+        <div class="section-header"><span class="mono-label">02. FAQ</span></div>
+        <dl>
+            <dt>Q: Can I control who I link to?</dt>
+            <dd>A: No, it's automated by a script that reads the members list.</dd>
+            <br>
+            <dt>Q: How can I reach the people who run this?</dt>
+            <dd>A: <a href="/#contact">Contact</a></dd>
+            <br>
+
+            <dt>Q: How can I build my own webring?</dt>
+            <dd>A: You can use the same code as this webring! It's all open source on GitHub: <a href="{{site.github_repo_url}}">github.com/your-username/webring</a>. It's based on <a href="https://vivivi.leprd.space/webmastery/webring/">vivivi.leprd.space/webmastery/webring/</a></dd>
+            <br>
+
+            <dt>Q: How do I join? Do you allow any website into Grimm Labs Webring?</dt>
+            <dd>
+                It's all answered on <a href="/join/">Join webring</a>
+            </dd>
+        </dl>
+    </div>
+    </div>
+   
+    <div class="section">
+        <div class="section-header"><span class="mono-label">03. {{site.data.members.size}} Members on the lab</span></div>
+        <div class="member-header">
+            <span>SLUG</span>
+            <span >URL</span>
+        </div>
+        
+        <ul class="member-list">
+        {% for member in site.data.members %}
+            <li class="member-item">
+                <div class="member-slug">
+                    <code>{{member.slug}}</code>
+                </div>
+                <div class="member-url">
+                    <a href="{{member.url | xml_escape}}" target="_blank">
+                        {{member.url}}
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <span class="mono-label">GRIMM LABS © 2026</span>
+    </footer>
+</main>
+</body>
+</html>

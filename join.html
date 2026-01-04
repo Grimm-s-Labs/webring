@@ -1,0 +1,95 @@
+---
+title: Join
+layout: html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/logo.png" type="image/png">
+    <link rel="stylesheet" href="./main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join - Grimm's lab webring</title>
+</head>
+<body>
+    <main>
+    <div class="noise-overlay"></div>
+    <header>
+        <div class="logo">
+            <a href="/" style="text-decoration:none;color:inherit">Grimm Labs</a>
+        </div>
+        <nav>
+            <a href="/#about">About</a>
+            <a href="/team/">Team</a>
+            <a href="/#projects">Projects</a>
+            <a href="/#contact">Contact</a>
+            <a href="https://discord.grimmlabs.org">Discord</a>
+        </nav>
+    </header>
+
+    <div class="description section" style="padding-top: 2rem;">
+        <div class="section-header"><span class="mono-label">01. Join the webring</span></div>
+        <p>Join Grimm Labs Webring and connect with other members of the community. Follow the steps below to become part of the ring.</p>
+    </div>
+
+    <div class="section">
+        <div class="section-header"><span class="mono-label">02. Criteria to join</span></div>
+        <ul>
+            <li>didn't find any criteria on the discord, im sorry :sob:</li>
+            <li>
+    Hate speech
+
+            </li>           
+            <li>
+    Racism, sexism, any kind of bigotry
+
+            </li>           
+            <li>
+    Advertisement-focused sites
+
+            </li>
+
+
+        </ul>
+        <small>It is impossible to enumerate everything that is not allowed. For this reason,
+             we reserve the right to remove a site if we feel it is outside of our own personal bounds.</small>
+    </div>
+
+    <div class="section">
+        <div class="section-header"><span class="mono-label">03. Add yourself to the members list</span></div>
+        <p>Add a unique slug, your webpage's name, and your webpage's URL to <a href={{site.github_repo_url}}/blob/main/_data/members.csv>the members list on GitHub</a> in a pull request.<br>
+        Pull requests can also be used to change your existing entry or delete your entry.</p>
+ 
+        <details>
+            <summary>If you don't have a GitHub account, fill out this form instead:</summary>
+            <form name=signup method=POST data-netlify=true netlify-honeypot=bot>
+                <div hidden><label>Leave this blank unless you're spam <input name=bot></label></div>
+                <label>Slug <input name=slug pattern=[0-9a-z](?:-?[0-9a-z])* required></label>
+                (ASCII lowercase letters, digits, and hyphen-minuses)<br>
+                <label>Name <textarea name=name></textarea></label><br>
+                <label>URL <input name=url type=url></label><br>
+                <label>E-mail address <input type=email name=email required></label><br>You'll receive an e-mail when your addition/change is made.<br>
+                <input type=submit>
+            </form>
+            <p>If you're editing your existing entry, make sure to use the same slug. If you're deleting your existing entry, leave the URL field blank.</p>
+        </details>
+    </div>
+
+     <div class="section">
+        <div class="section-header"><span class="mono-label">04. Add links on your webpage</span></div>
+        <code style="width: 100%;">
+            random member: {{'/random'|absolute_url}}
+            <br>
+            next member: {{'/SLUG/next'|absolute_url}}    
+            <br>
+            home page: {{'/'|absolute_url}}
+            <br>
+            previous member: {{'/SLUG/previous'|absolute_url}}    
+        </code>
+    </div>
+    <footer>
+        <span class="mono-label">GRIMM LABS © 2026</span>
+    </footer>
+    </main>
+</body>
+</html>
