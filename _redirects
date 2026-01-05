@@ -10,4 +10,3 @@ layout: none
 /{{member.slug | slugify}}/next  {{site.data.members[forloop.index].url}}  302
 /{{site.data.members[forloop.index].slug | slugify}}/previous  {{member.url}}  302
 {% endfor %}
-/random {{site.data.members | sample:1 | first.url}} 302
