@@ -19,10 +19,11 @@ layout: html
         <a href="/" style="text-decoration:none;color:inherit">Grimm Labs</a>
     </div>
         <nav>
-            <a href="/#about">About</a>
-            <a href="/team/">Team</a>
-            <a href="/#projects">Projects</a>
-            <a href="/#contact">Contact</a>
+            <a href="https://grimmlabs.org/#about">About</a>
+            <a href="https://grimmlabs.org/team/">Team</a>
+            <a href="https://grimmlabs.org/#projects">Projects</a>
+            <a href="https://grimmlabs.org/#contact">Contact</a>
+            <a href=".">Webring</a>
             <a href="https://discord.grimmlabs.org">Discord</a>
         </nav>
     </header>
@@ -44,11 +45,11 @@ layout: html
             <dd>A: No, it's automated by a script that reads the members list.</dd>
             <br>
             <dt>Q: How can I reach the people who run this?</dt>
-            <dd>A: <a href="/#contact">Contact</a></dd>
+            <dd>A: <a href="https://grimmlabs.org/#contact">Contact</a></dd>
             <br>
 
             <dt>Q: How can I build my own webring?</dt>
-            <dd>A: You can use the same code as this webring! It's all open source on GitHub: <a href="{{site.github_repo_url}}">github.com/your-username/webring</a>. It's based on <a href="https://vivivi.leprd.space/webmastery/webring/">vivivi.leprd.space/webmastery/webring/</a></dd>
+            <dd>A: You can use the same code as this webring! It's all open source on GitHub: <a href="{{site.github_repo_url}}">{{site.github_repo_url}}</a>. It's based on <a href="https://vivivi.leprd.space/webmastery/webring/">vivivi.leprd.space/webmastery/webring/</a></dd>
             <br>
 
             <dt>Q: How do I join? Do you allow any website into Grimm Labs Webring?</dt>
@@ -80,6 +81,9 @@ layout: html
             </li>
         {% endfor %}
         </ul>
+        <div style="display: flex; justify-content: center; margin-top: 2rem;">
+            <a href="./join/" class="button">Join the webring</a>
+        </div>
     </div>
     <footer>
         <span class="mono-label">GRIMM LABS © 2026</span>
